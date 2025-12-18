@@ -4,6 +4,11 @@ Local benchmarking utilities (batch runs) for the FaceRec pipeline.
 
 This folder is self-contained and uses the copied modules under `ml_models/` and `utils/` plus weights under `model_weights/`.
 
+## What’s here
+- Scripts: `scripts/batch_verify_videos.py` (single run), `scripts/continuous_verify.py` (cumulative averaging).
+- Analysis: `results_analysis.ipynb` (plots + summaries), `results/` CSVs, `result.csv`.
+- Confluence template: `docs/confluence_plan.md` (copy into Confluence with links to repo assets).
+
 ## Batch verify (one onboard video vs many verify videos)
 
 From `facerec/face-bench/`:
@@ -54,5 +59,20 @@ python scripts/continuous_verify.py \
 ```
 
 CSV files are named `step_00.csv` (onboard only), `step_01.csv` (onboard + first verify), `step_02.csv`, etc. The columns include `anchor_desc` and `anchor_size` so you know which cumulative anchor was used.
+
+## Analysis notebook
+- Open `results_analysis.ipynb` to:
+  - Summarize per-step CSVs (match rate, mean distances).
+  - Plot per-video trajectories across steps.
+  - Plot a 2D face map (cosine vs l2) with thumbnails from `result.csv`.
+- Ensure `results/step_*.csv` and `result.csv` exist before running.
+
+## Confluence page template
+- Use `docs/confluence_plan.md` as the source text; paste into Confluence and attach plots (exported from the notebook) plus link to this repo (`main` branch).
+
+## Quick repo pointers
+- Weights: `model_weights/facerec.pth` (and LightCNN/MTCNN weights).
+- Data layout (example): `data/onboard/video.mp4`, `data/verify/*.mp4`.
+- Outputs: `result.csv` (single), `results/step_*.csv` (continuous), exported plots (add to repo for sharing).
 
 
