@@ -41,9 +41,9 @@ Use this markdown as the source for your Confluence page. Copy/paste the section
 ## Results and assets
 - CSVs: `results/step_00.csv ... step_N.csv`, `result.csv`
 - Plots (export from notebook and attach):
-  - Average metrics plot (match rate / mean distances vs step)
-  - Per-file trajectories plot
-  - 2D face map (cosine vs l2, thumbnails)
+  - Average metrics plot (match rate / mean distances vs step) → `average_output.png`
+  - Per-file trajectories plot → `filewise_output.png`
+  - 2D face map (cosine vs l2, thumbnails) → `output.png`
   - Optional: deltas table snapshots
 
 ## Findings (fill in after reviewing plots)

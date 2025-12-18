@@ -67,6 +67,19 @@ CSV files are named `step_00.csv` (onboard only), `step_01.csv` (onboard + first
   - Plot a 2D face map (cosine vs l2) with thumbnails from `result.csv`.
 - Ensure `results/step_*.csv` and `result.csv` exist before running.
 
+### Key plots (exported PNGs)
+- Average metrics vs step: `average_output.png`
+- Per-file trajectories: `filewise_output.png`
+- 2D face map (cosine vs l2 thumbnails): `output.png`
+
+Inline previews (rendered on GitHub):
+
+![Average metrics vs step](average_output.png)
+
+![Per-file trajectories](filewise_output.png)
+
+![2D face map (cosine vs l2)](output.png)
+
 ## Confluence page template
 - Use `docs/confluence_plan.md` as the source text; paste into Confluence and attach plots (exported from the notebook) plus link to this repo (`main` branch).
 
